@@ -1,3 +1,16 @@
-body {
-  background-color: blue;
+.nav {
+  display: flex;
+}
+
+.logo img{
+  max-width: 50px;
+  height: auto;
+}
+
+.nav-links ul {
+  display: flex;
+}
+
+.nav-links li {
+  list-style-type: none;
 }
