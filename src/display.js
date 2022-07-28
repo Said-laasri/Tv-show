@@ -29,7 +29,6 @@ const display = (show) => {
       addComment(clickedId);
     });
   });
-
   const buttons = document.querySelectorAll('.reservationBtn');
   buttons.forEach((btn) => {
     btn.addEventListener('click', (e) => {

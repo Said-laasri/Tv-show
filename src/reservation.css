@@ -1,39 +1,38 @@
-
 .modal-container {
-    opacity: 1;
-    background-color: rgba(0,0,0 ,0.3);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .modal-container.hide {
-    pointer-events: none;
-    opacity: 0;
+  pointer-events: none;
+  opacity: 0;
 }
 
 .modal {
-    background-color: #fff;
-    width: 600px;
-    max-width: 100%;
-    border: 1px solid green;
-    padding: 20px 50px;
-    color: #000;
+  background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  border: 1px solid green;
+  padding: 20px 50px;
+  color: #000;
 }
 
 .close {
-    border: 1px solid rgb(247, 0, 0);
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    float: right;
+  border: 1px solid rgb(247, 0, 0);
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  float: right;
 }
