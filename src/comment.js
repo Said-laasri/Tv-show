@@ -3,14 +3,17 @@ import API_URL from './constant.js';
 /** ***comment API link ****** */
 export const commentAPIlink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/comments/';
 
-/** ***Display data using API*** */
+export const countComments = (data) => {
+  const count = data.length;
+  return count;
+};
 
 const fetchComment = (url, commentTitle, ulList) => {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
       if (data.length > 0) {
-        commentTitle.innerHTML = `Comment (${data.length})`;
+        commentTitle.innerHTML = `Reservation (${countComments(data)})`;
         data.forEach((e) => {
           const commentLi = document.createElement('li');
           commentLi.innerHTML = `${e.creation_date}  ${e.username} : ${e.comment}`;
@@ -20,6 +23,7 @@ const fetchComment = (url, commentTitle, ulList) => {
     });
 };
 
+/** ***Display data using API*** */
 export const displayComment = (item_id) => {
   const movieImg = document.createElement('img');
   const movieTitle = document.createElement('h2');
