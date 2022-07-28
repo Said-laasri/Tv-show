@@ -48,7 +48,7 @@ const fetchReservation = (url, reservationTitle, ulList) => {
     .then((response) => response.json())
     .then((data) => {
       if (data.length > 0) {
-        reservationTitle.innerHTML = `Reservation (${data.length})`;
+        reservationTitle.innerHTML = `Reservation (${countReservations(data)})`;  
         data.forEach((e) => {
           const reservationLi = document.createElement('li');
           reservationLi.innerHTML = `${e.date_start} - ${e.date_end} by ${e.username}`;
@@ -56,7 +56,15 @@ const fetchReservation = (url, reservationTitle, ulList) => {
         });
       }
     });
+    return
 };
+
+
+export const countReservations = (data)=> {
+  const count = data.length
+  return count
+}
+
 const userName = document.querySelector('.username');
 const startDate = document.querySelector('.startDate');
 const endDate = document.querySelector('.endDate');
