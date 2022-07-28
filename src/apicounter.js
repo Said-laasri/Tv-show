@@ -1,11 +1,12 @@
-import API_URL from './constant.js';
-
 const displaycount = document.querySelector('.count');
-const counter = async () => {
-  const fetchData = await fetch(API_URL);
-  const data = await fetchData.json();
-  const count = data.length;
-  displaycount.innerHTML = `(${count})`;
+const countElement = () => {
+  const tvShows = document.querySelectorAll('.show-container');
+  let count = 0;
+  for (let i = 0; i < tvShows.length; i += 1) {
+    count += 1;
+  }
+  const showCount = `(${count})`;
+  displaycount.innerHTML = showCount;
 };
 
-export default counter;
+export default countElement;
