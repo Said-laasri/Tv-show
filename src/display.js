@@ -1,4 +1,5 @@
 import { displayReservation, addReservation } from './reservation.js';
+import { displayComment, addComment } from './comment.js';
 
 const shows = document.querySelector('.tv-shows');
 
@@ -15,11 +16,20 @@ const display = (show) => {
                                 </div>
                                 <p class="season"> season ${item.season} episode ${item.number} </p>
                                 <p class="description">${item.summary}</p>
-                                <button class="comment">Comment</button>
+                                <button class="comment" id=${item.id}>Comment</button>
                                 <button class="reservationBtn" id=${item.id}>Reservation</button> `;
 
     shows.appendChild(showcontainer);
   });
+  const commentBtn = document.querySelectorAll('.comment');
+  commentBtn.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const clickedId = e.target.id;
+      displayComment(clickedId);
+      addComment(clickedId);
+    });
+  });
+
   const buttons = document.querySelectorAll('.reservationBtn');
   buttons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
