@@ -21,7 +21,6 @@ export const displayReservation = (item_id) => {
   modal.appendChild(btn);
 
   fetch(API_URL).then((res) => res.json()).then((data) => {
-
     const selected = data.filter((item) => item.id === +item_id)[0];
     movieImg.src = selected.image.medium;
     movieTitle.textContent = selected.name;

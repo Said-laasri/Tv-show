@@ -26,17 +26,41 @@
       </div>
     </header>
     <section id="showstv" class="tv-shows"></section>
-      <!--reservation start here-->
-      <div class="reservation">
-        <div class="reservationForm">
-          <h3>Add Reservation</h3>
-               <input type="text" placeholder="" class="username">
-               <input class="startDate" type="date" placeholder="Select start date">
-               <input class="endDate" type="date" placeholder="Select end date">
-             <button id="reserve">Reserve</button>
-        </div>
+    <!--reservation start here-->
+    <div class="reservation">
+      <div class="reservationForm">
+        <h3>Add Reservation</h3>
+        <input type="text" placeholder="" class="username" />
+        <input class="startDate" type="date" placeholder="Select start date" />
+        <input class="endDate" type="date" placeholder="Select end date" />
+        <button id="reserve">Reserve</button>
       </div>
-      <!--reservation ends here-->
+    </div>
+    <!--reservation ends here-->
+    <!-- comment starts -->
+    <div class="comment-div">
+      <form class="comment-form">
+        <label>Add a Comments</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          class="commenter"
+          placeholder="Your name"
+        />
+        <textarea
+          rows="6"
+          cols="50"
+          name="comment"
+          form="usrform"
+          class="comment-input"
+          placeholder="Your insights"
+        ></textarea>
+        <button type="submit" class="submit-comment" id="submit-comment">
+          Comment
+        </button>
+      </form>
+    </div>
     <footer>
       <p>Created as A group project @Microverse CC License</p>
     </footer>
