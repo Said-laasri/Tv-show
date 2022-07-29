@@ -1,6 +1,4 @@
-// eslint-disable-next-line operator-linebreak
-const API_LIKES =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dZgTTlr5uztQNogDJTyt/likes';
+const API_LIKES = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/dZgTTlr5uztQNogDJTyt/likes';
 
 const tvshow = document.querySelector('.tv-shows');
 

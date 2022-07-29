@@ -1,13 +1,29 @@
-/* eslint-disable operator-linebreak */
-/* eslint-disable no-use-before-define */
-/* eslint-disable camelcase */
 import API_URL from './constant.js';
 
-export const reservationAPIlink =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/reservations/';
+export const reservationAPIlink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/reservations/';
+
+export const countReservations = (data) => {
+  const count = data.length;
+  return count;
+};
+
+const fetchReservation = (url, reservationTitle, ulList) => {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.length > 0) {
+        reservationTitle.innerHTML = `Reservation (${countReservations(data)})`;
+        data.forEach((e) => {
+          const reservationLi = document.createElement('li');
+          reservationLi.innerHTML = `${e.date_start} - ${e.date_end} by ${e.username}`;
+          ulList.appendChild(reservationLi);
+        });
+      }
+    });
+};
 
 /** ***Display data using API*** */
-export const displayReservation = (item_id) => {
+export const displayReservation = (itemId) => {
   const movieImg = document.createElement('img');
   const movieTitle = document.createElement('h2');
   const reservation = document.querySelector('.reservation');
@@ -29,14 +45,14 @@ export const displayReservation = (item_id) => {
   fetch(API_URL)
     .then((res) => res.json())
     .then((data) => {
-      const selected = data.filter((item) => item.id === +item_id)[0];
+      const selected = data.filter((item) => item.id === +itemId)[0];
       movieImg.src = selected.image.medium;
       movieTitle.textContent = selected.name;
     });
 
   modal.appendChild(movieImg);
   modal.appendChild(movieTitle);
-  const url = `${reservationAPIlink}?item_id=${item_id}`;
+  const url = `${reservationAPIlink}?item_id=${itemId}`;
 
   const reservationTitle = document.createElement('h3');
   reservationTitle.classList.add('resTitle');
@@ -51,32 +67,12 @@ export const displayReservation = (item_id) => {
   modal.appendChild(reservationForm);
 };
 
-const fetchReservation = (url, reservationTitle, ulList) => {
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.length > 0) {
-        reservationTitle.innerHTML = `Reservation (${countReservations(data)})`;
-        data.forEach((e) => {
-          const reservationLi = document.createElement('li');
-          reservationLi.innerHTML = `${e.date_start} - ${e.date_end} by ${e.username}`;
-          ulList.appendChild(reservationLi);
-        });
-      }
-    });
-};
-
-export const countReservations = (data) => {
-  const count = data.length;
-  return count;
-};
-
 const userName = document.querySelector('.username');
 const startDate = document.querySelector('.startDate');
 const endDate = document.querySelector('.endDate');
 const reserveBtn = document.querySelector('#reserve');
 
-export const addReservation = (item_id) => {
+export const addReservation = (itemId) => {
   reserveBtn.addEventListener('click', async (event) => {
     event.preventDefault();
     if (!userName.value || !endDate.value || !startDate.value) {
@@ -87,7 +83,7 @@ export const addReservation = (item_id) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        item_id,
+        item_id: itemId,
         username: userName.value,
         date_start: startDate.value,
         date_end: endDate.value,
@@ -98,7 +94,7 @@ export const addReservation = (item_id) => {
     startDate.value = '';
     endDate.value = '';
 
-    const url = `${reservationAPIlink}?item_id=${item_id}`;
+    const url = `${reservationAPIlink}?item_id=${itemId}`;
     const uList = document.querySelector('.resList');
     uList.innerHTML = '';
     const uTitle = document.querySelector('.resTitle');

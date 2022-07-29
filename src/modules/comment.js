@@ -1,10 +1,7 @@
-/* eslint-disable operator-linebreak */
-/* eslint-disable camelcase */
 import API_URL from './constant.js';
 
 /** ***comment API link ****** */
-export const commentAPIlink =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/comments/';
+export const commentAPIlink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/comments/';
 
 export const countComments = (data) => {
   const count = data.length;
@@ -27,7 +24,7 @@ const fetchComment = (url, commentTitle, ulList) => {
 };
 
 /** ***Display data using API*** */
-export const displayComment = (item_id) => {
+export const displayComment = (itemId) => {
   const movieImg = document.createElement('img');
   const movieTitle = document.createElement('h2');
   const comment = document.querySelector('.comment-div');
@@ -49,14 +46,14 @@ export const displayComment = (item_id) => {
   fetch(API_URL)
     .then((res) => res.json())
     .then((data) => {
-      const selected = data.filter((item) => item.id === +item_id)[0];
+      const selected = data.filter((item) => item.id === +itemId)[0];
       movieImg.src = selected.image.medium;
       movieTitle.textContent = selected.name;
     });
 
   modal.appendChild(movieImg);
   modal.appendChild(movieTitle);
-  const url = `${commentAPIlink}?item_id=${item_id}`;
+  const url = `${commentAPIlink}?item_id=${itemId}`;
 
   const commentTitle = document.createElement('h3');
   commentTitle.classList.add('comment-Title');
@@ -75,7 +72,7 @@ const userName = document.querySelector('.commenter');
 const commentInput = document.querySelector('.comment-input');
 const commentBtn = document.querySelector('#submit-comment');
 
-export const addComment = (item_id) => {
+export const addComment = (itemId) => {
   commentBtn.addEventListener('click', async (event) => {
     event.preventDefault();
     if (!userName.value || !commentInput.value) {
@@ -86,7 +83,7 @@ export const addComment = (item_id) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        item_id,
+        item_id: itemId,
         username: userName.value,
         comment: commentInput.value,
       }),
@@ -95,7 +92,7 @@ export const addComment = (item_id) => {
     userName.value = '';
     commentInput.value = '';
 
-    const url = `${commentAPIlink}?item_id=${item_id}`;
+    const url = `${commentAPIlink}?item_id=${itemId}`;
     const uList = document.querySelector('.comment-List');
     uList.innerHTML = '';
     const uTitle = document.querySelector('.comment-Title');
