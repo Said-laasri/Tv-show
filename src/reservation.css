@@ -1,38 +1,32 @@
-.modal-container {
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
+.reservationForm {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: rgba(128, 128, 128, 0.329);
 }
 
-button {
-  cursor: pointer;
+.hide {
+  display: none;
 }
 
-.modal-container.hide {
-  pointer-events: none;
-  opacity: 0;
+.reservationForm h3 {
+  margin: 20px 0 10px 0;
+  text-align: center;
 }
 
-.modal {
-  background-color: #fff;
-  width: 600px;
-  max-width: 100%;
-  border: 1px solid green;
-  padding: 20px 50px;
-  color: #000;
+.reservationForm input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
 }
 
-.close {
-  border: 1px solid rgb(247, 0, 0);
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  float: right;
+.reservationForm button {
+  padding: 10px;
+  margin: 10px auto 10px auto;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
 }

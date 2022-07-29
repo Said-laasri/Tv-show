@@ -8,6 +8,7 @@ export const displayReservation = (item_id) => {
   const movieImg = document.createElement('img');
   const movieTitle = document.createElement('h2');
   const reservation = document.querySelector('.reservation');
+  reservation.classList.remove('hide');
   const reservationCard = document.createElement('div');
   reservationCard.classList.add('modal-container');
   const modal = document.createElement('div');
@@ -15,6 +16,8 @@ export const displayReservation = (item_id) => {
   reservationCard.appendChild(modal);
   const btn = document.createElement('button');
   btn.classList.add('close');
+  btn.classList.add('fa');
+  btn.classList.add('fa-close');
   btn.addEventListener('click', () => {
     reservationCard.classList.add('hide');
   });

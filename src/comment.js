@@ -28,6 +28,7 @@ export const displayComment = (item_id) => {
   const movieImg = document.createElement('img');
   const movieTitle = document.createElement('h2');
   const comment = document.querySelector('.comment-div');
+  comment.classList.remove('hide');
   const commentModal = document.createElement('div');
   commentModal.classList.add('modal-container');
   const modal = document.createElement('div');
@@ -35,6 +36,8 @@ export const displayComment = (item_id) => {
   commentModal.appendChild(modal);
   const btn = document.createElement('button');
   btn.classList.add('close');
+  btn.classList.add('fa');
+  btn.classList.add('fa-close');
   btn.addEventListener('click', () => {
     commentModal.classList.add('hide');
   });

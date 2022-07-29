@@ -1,16 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url(https://wallpaperaccess.com/full/1491559.jpg);
-  color: #f2f2f2;
-  font-family: "Courier New", Courier, monospace;
+  background-color: rgba(0, 0, 0, 0.897);
+  color: #fff;
+}
+
+.logo > img {
+  width: 100px;
+  height: auto;
 }
 
 .nav {
+  padding: 10px 50px;
   display: flex;
   justify-content: space-between;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  background-image: url(https://wallpaperaccess.com/full/1491559.jpg);
-  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  align-items: center;
+  background-color: rgba(172, 172, 172, 0.274);
+  border-bottom: 1px solid rgba(172, 172, 172, 0.555);
 }
 
 .nav-links ul {
@@ -21,23 +33,207 @@ body {
 
 .nav-links li {
   list-style-type: none;
+  font-size: 20px;
+  margin-left: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.tv-shows {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 10px;
-  padding: 10px;
-}
-
-a {
+.nav-links a {
   text-decoration: none;
-  color: #f2f2f2;
-  font-size: 14px;
-  font-weight: 700;
+  color: #fff;
 }
 
-.logo > img {
-  width: 50px;
-  height: 50px;
+/**********  hero section  ***********/
+.blurred-wrapper {
+  height: 100vh;
+  background: url("./assets/img/wallpaper.jpg") center/cover;
+  position: relative;
+  z-index: 1;
+  animation: hue 10s infinite alternate;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.blurred-wrapper::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(2rem);
+  z-index: -1;
+  transform: scale(1.15);
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #8d8d8d4d;
+  color: #fff;
+  border: 1px solid #d1d1d194;
+}
+
+.content-wrapper a {
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.content-wrapper {
+  margin-top: 100px;
+  transform: translateY(-4rem);
+}
+
+.tagline {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    text-align: start;
+  }
+
+  .tagline {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* card design start here */
+.tv-shows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.show-container {
+  box-sizing: border-box;
+  max-width: 300px;
+  margin: 0 10px 50px 10px;
+  position: relative;
+  padding: 30px;
+  padding-bottom: 15px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.image {
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.title-show {
+  padding: 20px 0 10px;
+  text-align: center;
+}
+
+.likeheart::before {
+  color: #f00;
+  margin-right: 5px;
+}
+
+.info i {
+  margin: 0 auto 20px auto;
+}
+
+.likeheart {
+  max-width: 60px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(96, 96, 96, 0.2);
+  transition: background 0.4s linear;
+  display: flex;
+  justify-content: center;
+}
+
+.likeheart:hover {
+  background: rgb(236, 35, 115, 0.5);
+}
+
+.season {
+  text-align: center;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.comment {
+  margin: 20px 0 0 30px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.reservationBtn {
+  margin: 20px 0 0 0;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.description {
+  box-shadow: 0 0 3px 0.2px rgba(255, 255, 255, 0.377);
+  max-height: 100px;
+  overflow-y: auto;
+  padding: 15px;
+  text-align: center;
+}
+
+.description::-webkit-scrollbar {
+  display: none;
 }

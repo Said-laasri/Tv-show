@@ -11,6 +11,7 @@
     <title>Shows</title>
   </head>
   <body>
+    <div class="blurred-wrapper">
     <header class="nav">
       <div class="logo" style="background-image: url(./assets/stage.png)">
         <img src="./assets/img/logo.png" alt="panguin" />
@@ -25,12 +26,21 @@
         </ul>
       </div>
     </header>
+        
+    <section class="hero container">
+      <div class="content-wrapper">
+        <h5 class="tagline">More than a collection</h5>
+        <h1 class="title">Welcome to our <br> Studio<span>.</span></h1>
+        <a href="#showstv" class="btn cta">Scroll Down</a>
+      </div>
+    </section>
+  </div>
     <section id="showstv" class="tv-shows"></section>
     <!--reservation start here-->
-    <div class="reservation">
+    <div class="reservation hide">
       <div class="reservationForm">
         <h3>Add Reservation</h3>
-        <input type="text" placeholder="" class="username" />
+        <input type="text" placeholder="Enter your Name" class="username" />
         <input class="startDate" type="date" placeholder="Select start date" />
         <input class="endDate" type="date" placeholder="Select end date" />
         <button id="reserve">Reserve</button>
@@ -38,7 +48,7 @@
     </div>
     <!--reservation ends here-->
     <!-- comment starts -->
-    <div class="comment-div">
+    <div class="comment-div hide">
       <form class="comment-form">
         <label>Add a Comments</label>
         <input

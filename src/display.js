@@ -15,7 +15,7 @@ const display = (show) => {
                                 <span class="likes" id="${item.id}"></span>
                                 </div>
                                 <p class="season"> season ${item.season} episode ${item.number} </p>
-                                <p class="description">${item.summary}</p>
+                                <div class="description">${item.summary}</div>
                                 <button class="comment" id=${item.id}>Comment</button>
                                 <button class="reservationBtn" id=${item.id}>Reservation</button> `;
 
