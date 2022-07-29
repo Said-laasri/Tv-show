@@ -1,11 +1,11 @@
-import './styles.css';
-import renderAPI from './GetData.js';
+import './CSS/styles.css';
+import './CSS/reservation.css';
+import './CSS/comment.css';
+import renderAPI from './modules/GetData.js';
 import './assets/img/logo.png';
-import uploadLikes from './post.js';
-import getLikes from './gitlikes.js';
-import countElement from './apicounter.js';
-import './reservation.css';
-import './comment.css';
+import uploadLikes from './modules/post.js';
+import getLikes from './modules/gitlikes.js';
+import countElement from './modules/apicounter.js';
 
 window.onload = () => {
   renderAPI();
@@ -15,4 +15,4 @@ window.onload = () => {
 
 setTimeout(() => {
   countElement();
-}, 3000);
+}, 4000);

@@ -1,13 +1,17 @@
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-use-before-define */
+/* eslint-disable camelcase */
 import API_URL from './constant.js';
 
-/** ***reservation API link ****** */
-export const reservationAPIlink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/reservations/';
+export const reservationAPIlink =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/reservations/';
 
 /** ***Display data using API*** */
 export const displayReservation = (item_id) => {
   const movieImg = document.createElement('img');
   const movieTitle = document.createElement('h2');
   const reservation = document.querySelector('.reservation');
+  reservation.classList.remove('hide');
   const reservationCard = document.createElement('div');
   reservationCard.classList.add('modal-container');
   const modal = document.createElement('div');
@@ -15,16 +19,20 @@ export const displayReservation = (item_id) => {
   reservationCard.appendChild(modal);
   const btn = document.createElement('button');
   btn.classList.add('close');
+  btn.classList.add('fa');
+  btn.classList.add('fa-close');
   btn.addEventListener('click', () => {
     reservationCard.classList.add('hide');
   });
   modal.appendChild(btn);
 
-  fetch(API_URL).then((res) => res.json()).then((data) => {
-    const selected = data.filter((item) => item.id === +item_id)[0];
-    movieImg.src = selected.image.medium;
-    movieTitle.textContent = selected.name;
-  });
+  fetch(API_URL)
+    .then((res) => res.json())
+    .then((data) => {
+      const selected = data.filter((item) => item.id === +item_id)[0];
+      movieImg.src = selected.image.medium;
+      movieTitle.textContent = selected.name;
+    });
 
   modal.appendChild(movieImg);
   modal.appendChild(movieTitle);
@@ -78,14 +86,12 @@ export const addReservation = (item_id) => {
     await fetch(reservationAPIlink, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(
-        {
-          item_id,
-          username: userName.value,
-          date_start: startDate.value,
-          date_end: endDate.value,
-        },
-      ),
+      body: JSON.stringify({
+        item_id,
+        username: userName.value,
+        date_start: startDate.value,
+        date_end: endDate.value,
+      }),
     });
 
     userName.value = '';

@@ -1,0 +1,32 @@
+.reservationForm {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: rgba(128, 128, 128, 0.329);
+}
+
+.hide {
+  display: none;
+}
+
+.reservationForm h3 {
+  margin: 20px 0 10px 0;
+  text-align: center;
+}
+
+.reservationForm input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.reservationForm button {
+  padding: 10px;
+  margin: 10px auto 10px auto;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}

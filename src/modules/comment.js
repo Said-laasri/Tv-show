@@ -1,7 +1,10 @@
+/* eslint-disable operator-linebreak */
+/* eslint-disable camelcase */
 import API_URL from './constant.js';
 
 /** ***comment API link ****** */
-export const commentAPIlink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/comments/';
+export const commentAPIlink =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/comments/';
 
 export const countComments = (data) => {
   const count = data.length;
@@ -28,6 +31,7 @@ export const displayComment = (item_id) => {
   const movieImg = document.createElement('img');
   const movieTitle = document.createElement('h2');
   const comment = document.querySelector('.comment-div');
+  comment.classList.remove('hide');
   const commentModal = document.createElement('div');
   commentModal.classList.add('modal-container');
   const modal = document.createElement('div');
@@ -35,6 +39,8 @@ export const displayComment = (item_id) => {
   commentModal.appendChild(modal);
   const btn = document.createElement('button');
   btn.classList.add('close');
+  btn.classList.add('fa');
+  btn.classList.add('fa-close');
   btn.addEventListener('click', () => {
     commentModal.classList.add('hide');
   });
