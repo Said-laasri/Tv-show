@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css "
+    />
+    <title>Shows</title>
+  </head>
+  <body>
+    <div class="blurred-wrapper">
+      <header class="nav">
+        <div class="logo">
+          <img src="./assets/img/logo.png" alt="panguin" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a href="#showstv">Shows <span class="count"></span></a>
+            </li>
+            <li>TV</li>
+            <li>Episodes</li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="hero container">
+        <div class="content-wrapper">
+          <h5 class="tagline">More than a collection</h5>
+          <h1 class="title">
+            Welcome to our <br />
+            Studio<span>.</span>
+          </h1>
+          <a href="#showstv" class="btn cta">Scroll Down</a>
+        </div>
+      </section>
+    </div>
+    <section id="showstv" class="tv-shows"></section>
+    <!--reservation start here-->
+    <div class="reservation hide">
+      <div class="reservationForm">
+        <h3>Add Reservation</h3>
+        <input type="text" placeholder="Enter your Name" class="username" />
+        <input class="startDate" type="date" placeholder="Select start date" />
+        <input class="endDate" type="date" placeholder="Select end date" />
+        <button id="reserve">Reserve</button>
+      </div>
+    </div>
+    <!--reservation ends here-->
+    <!-- comment starts -->
+    <div class="comment-div hide">
+      <form class="comment-form">
+        <label>Add a Comments</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          class="commenter"
+          placeholder="Your name"
+        />
+        <textarea
+          rows="6"
+          cols="50"
+          name="comment"
+          form="usrform"
+          class="comment-input"
+          placeholder="Your insights"
+        ></textarea>
+        <button type="submit" class="submit-comment" id="submit-comment">
+          Comment
+        </button>
+      </form>
+    </div>
+    <footer>
+      <p>Created as a group project @Microverse CC License</p>
+    </footer>
+  </body>
+</html>

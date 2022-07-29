@@ -1,0 +1,107 @@
+.modal-container {
+  opacity: 1;
+  background-color: rgba(3, 3, 3, 0.116);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -350px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.modal-container.hide {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal {
+  background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 20px 50px;
+  color: #000;
+  height: 90%;
+  margin-top: 30px;
+  overflow-y: auto;
+  border-radius: 25px;
+  border: none;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+.close {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  float: right;
+  margin: 20px 0;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.329);
+  color: black;
+  border-radius: 5px;
+}
+
+.modal img {
+  width: 500px;
+}
+
+.modal h2 {
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.modal ul {
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+.modal li {
+  background-color: rgb(221, 220, 220);
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.comment-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form label {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.comment-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  box-shadow: 0 0 3px 0.5px rgba(0, 0, 0, 0.226);
+}
+
+.comment-form textarea {
+  resize: none;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 0 3px 0.5px rgba(0, 0, 0, 0.226);
+}
+
+.comment-form button {
+  margin: 10px auto 0 auto;
+  width: 100px;
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+  border: none;
+}
