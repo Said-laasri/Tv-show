@@ -1,100 +1,103 @@
-    # Project Name
-    Tv-Shows
+# Project Name
 
-    # Description the project.
+Tv-Shows
 
-    Tv-shows website is a page that containes a list of cards of shows with detail about the shows
+# Description the project.
 
-    ## Built With
+Tv-shows website is a page that containes a list of cards of shows with detail about the shows
 
-    - html/css/js.
-    - following linters standards.
-    - following github flows standards.
-    - webpack.
+## Built With
 
+- html/css/js.
+- following linters standards.
+- following github flows standards.
+- webpack.
 
-    ## Getting Started
+## Getting Started
 
-    **This web page is TV-show with reservation and comments**
+**This web page is TV-show with reservation and comments**
 
-    **TV-show project  works on mobile and disktop.**
-    ****************************************************
-    To get a local copy up and running follow these simple example steps.
-    follow>>>>>>>>>
+**TV-show project works on mobile and disktop.**
 
+---
 
-    ### Setup
+To get a local copy up and running follow these simple example steps.
+follow>>>>>>>>>
 
-    to use the project Leaderboard please follow :
-     >Open GitHub and go to my GitHub repository name: Tv-show.to clone.
+### Setup
 
-     >Click “Code” and copy the given URL.
+to use the project Leaderboard please follow :
 
-     >click code and copy the URL.
+> Open GitHub and go to my GitHub repository name: Tv-show.to clone.
 
-     >click code and copy the URL.
+> Click “Code” and copy the given URL.
 
-     >Open “Git Bash” and change the current working directory to the location where you want the cloned directory.
+> click code and copy the URL.
 
-     >Type git clone in the terminal, paste the URL you copied earlier, and press “enter” to create your local clone.
+> click code and copy the URL.
 
-     >Syntax:
+> Open “Git Bash” and change the current working directory to the location where you want the cloned directory.
 
-      $ git clone {repository URL}
+> Type git clone in the terminal, paste the URL you copied earlier, and press “enter” to create your local clone.
 
-    ### Usage
+> Syntax:
 
-    >open your directory Tv-show/
+$ git clone {repository URL}
 
-    _use vs-code or any IDE  to view line code .
+### Usage
 
-    _use you preferd browser to run the file .html to get project website.
-    to run in terminal / git  :
-    -----------------
-     $ npm install
+> open your directory Tv-show/
 
-     then:
+\_use vs-code or any IDE to view line code .
 
-     $ npm start
-     _____________
+\_use you preferd browser to run the file .html to get project website.
+to run in terminal / git :
 
-    ## Authors
+---
 
-    👤 **Said laasri**
+$ npm install
 
-    - GitHub: [@Said-laasri](https://github.com/Said-laasri)
-    - Twitter: [@saidlaasr](https://twitter.com/saidlaasr)
-    - LinkedIn: [SAID LAASRI](https://www.linkedin.com/in/said-laasri-8a4367172/)
+then:
 
-    👤 **Maris Kelly Besong**
+$ npm start
 
-    - GitHub: [@Maris Kelly Besong](https://github.com/kelwilson)
-    - Twitter: [@Maris Kelly Besong](https://twitter.com/BesongMaris)
-    - LinkedIn: [Maris Kelly Besong](https://www.linkedin.com/in/kelly-besong-b33074237/)
+---
 
+## Authors
 
-    👤 **Chrispaix Kaze**
+👤 **Said laasri**
 
-    - GitHub: [@Chrispaix Kaze](https://github.com/ChrispaixK)
-    - Twitter: [@Chrispaix Kaze](https://twitter.com/ChrispaixK)
-    - LinkedIn: [Chrispaix Kaze](https://www.linkedin.com/in/chrispaix-kaze-70445a175/)
+- GitHub: [@Said-laasri](https://github.com/Said-laasri)
+- Twitter: [@saidlaasr](https://twitter.com/saidlaasr)
+- LinkedIn: [SAID LAASRI](https://www.linkedin.com/in/said-laasri-8a4367172/)
 
-    ## 🤝 Contributing
+👤 **Maris Kelly Besong**
 
-    Contributions, issues, and feature requests are welcome!
-    thanks:
+- GitHub: [@Maris Kelly Besong](https://github.com/kelwilson)
+- Twitter: [@Maris Kelly Besong](https://twitter.com/BesongMaris)
+- LinkedIn: [Maris Kelly Besong](https://www.linkedin.com/in/kelly-besong-b33074237/)
 
+👤 **Chrispaix Kaze**
 
-    ## Show your support
+- GitHub: [@Chrispaix Kaze](https://github.com/ChrispaixK)
+- Twitter: [@Chrispaix Kaze](https://twitter.com/ChrispaixK)
+- LinkedIn: [Chrispaix Kaze](https://www.linkedin.com/in/chrispaix-kaze-70445a175/)
 
-    Give a ⭐️ if you like this project!
+## 🤝 Contributing
 
-    ## Acknowledgments
+Contributions, issues, and feature requests are welcome!
+thanks:
 
-    - Microverse
-    - Inspiration
-    - etc
+## Show your support
 
-    ## 📝 License
+Give a ⭐️ if you like this project!
 
-    This project is [MIT](./MIT.md) licensed.
+## Acknowledgments
+
+- Microverse
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
