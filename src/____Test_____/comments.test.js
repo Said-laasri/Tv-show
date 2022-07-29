@@ -1,4 +1,4 @@
-import { countComments } from './comment.js';
+import { countComments } from '../modules/comment.js';
 
 describe('Count comments Function', () => {
   test('counts 0 items', () => {

@@ -1,7 +1,10 @@
+/* eslint-disable operator-linebreak */
+/* eslint-disable camelcase */
 import API_URL from './constant.js';
 
 /** ***comment API link ****** */
-export const commentAPIlink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/comments/';
+export const commentAPIlink =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/comments/';
 
 export const countComments = (data) => {
   const count = data.length;

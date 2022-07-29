@@ -47,7 +47,7 @@ body {
 /**********  hero section  ***********/
 .blurred-wrapper {
   height: 100vh;
-  background: url("./assets/img/wallpaper.jpg") center/cover;
+  background: url('../assets/img/wallpaper.jpg') center/cover;
   position: relative;
   z-index: 1;
   animation: hue 10s infinite alternate;
@@ -236,4 +236,13 @@ body {
 
 .description::-webkit-scrollbar {
   display: none;
+}
+
+/* *footer */
+footer {
+  padding: 10px 10px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }

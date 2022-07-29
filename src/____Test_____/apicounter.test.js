@@ -1,4 +1,4 @@
-import countElement from './apicounter.js';
+import countElement from '../modules/apicounter.js';
 
 describe('count number of elem in api', () => {
   test('should first', () => {

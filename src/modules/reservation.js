@@ -1,7 +1,10 @@
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-use-before-define */
+/* eslint-disable camelcase */
 import API_URL from './constant.js';
 
-/** ***reservation API link ****** */
-export const reservationAPIlink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/reservations/';
+export const reservationAPIlink =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/2NLqYBO19Fcoktw8xmgq/reservations/';
 
 /** ***Display data using API*** */
 export const displayReservation = (item_id) => {
@@ -23,11 +26,13 @@ export const displayReservation = (item_id) => {
   });
   modal.appendChild(btn);
 
-  fetch(API_URL).then((res) => res.json()).then((data) => {
-    const selected = data.filter((item) => item.id === +item_id)[0];
-    movieImg.src = selected.image.medium;
-    movieTitle.textContent = selected.name;
-  });
+  fetch(API_URL)
+    .then((res) => res.json())
+    .then((data) => {
+      const selected = data.filter((item) => item.id === +item_id)[0];
+      movieImg.src = selected.image.medium;
+      movieTitle.textContent = selected.name;
+    });
 
   modal.appendChild(movieImg);
   modal.appendChild(movieTitle);
@@ -81,14 +86,12 @@ export const addReservation = (item_id) => {
     await fetch(reservationAPIlink, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(
-        {
-          item_id,
-          username: userName.value,
-          date_start: startDate.value,
-          date_end: endDate.value,
-        },
-      ),
+      body: JSON.stringify({
+        item_id,
+        username: userName.value,
+        date_start: startDate.value,
+        date_end: endDate.value,
+      }),
     });
 
     userName.value = '';
