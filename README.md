@@ -26,9 +26,13 @@
 Tv-show is a website for a tv show that contains information about the tv show and the episodes and the schedule of the tv show.
 
 ## 🛠 Built With <a name="built-with"></a>
-HTML 
-Css
-JavaScript
+<ul>
+  <li>JavaScript</li>
+  <li>Html</li>
+  <li>Css</li>
+  <li>API</li>
+</ul>
+
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
