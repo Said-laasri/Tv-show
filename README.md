@@ -62,7 +62,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd nicholas-portfolio
+  cd to folder
   yarn install
 ```
 
